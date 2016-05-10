@@ -1,0 +1,168 @@
+@import reset.css
+
+$green1: #87C7B9
+$green2: #98AC39
+$green3: #D6B021
+$green4: #E69F8D
+$lust: 'lust-display', serif
+$acumin: 'acumin-pro', sans-serif
+
+html
+  -webkit-font-smoothing: antialiased
+  
+body
+  color: #fff
+  font-family: $acumin
+  font-size: 14px
+  background-image: url('/assets/img/bg.jpg')
+  background-size: cover
+  @media screen and (min-width: 600px)
+    font-size: 16px
+  @media screen and (min-width: 1024px)
+    font-size: 18px
+ 
+.overlay
+  width: 100%
+  height: 100%
+  position: fixed
+  background: rgba(0,0,0,.7)
+  opacity: 0
+  transition: all .4s ease .05s
+  
+h1
+  font-size: 22px
+  font-family: $lust
+  @media screen and (min-width: 600px)
+    font-size: 26px
+  @media screen and (min-width: 1024px)
+    font-size: 32px
+
+h2
+  font-size: 18px
+  //font-family: $lust
+  @media screen and (min-width: 600px)
+    font-size: 22px
+  @media screen and (min-width: 1024px)
+    font-size: 26px
+
+p
+  margin-top: .7em
+    
+a
+  color: #fff
+
+#head-nav-outer
+  position: absolute
+  width: 100%
+  top: 0
+  z-index: 1
+  
+#head-nav-inner
+  width: 100%
+  margin: 0 auto
+  
+.upper-nav
+  li 
+    display: block
+    width: 25%
+    float: left
+    background: #fff
+    min-height: 35px
+    text-align: center
+    padding-top: 4px
+    &.nav-1
+      background-color: $green1
+    &.nav-2
+      background-color: $green2
+    &.nav-3
+      background-color: $green3
+    &.nav-4
+      background-color: $green4
+    &.active
+      font-weight: bold
+    a
+      color: rgba(255,255,255,.9)
+      text-decoration: none
+    
+#slug
+  height: 90%
+  
+.wordmark
+  font-size: 2rem
+  font-weight: bold
+
+.section
+  &.five
+    min-height: 20%
+    background: #fff
+    color: $green1
+
+.interior
+  width: 90vw
+  background-color: $green1
+  margin: 0 auto
+  padding: 2em
+  @media screen and (min-width: 600px)
+    width: 50%
+    margin: 0
+    height: auto
+  @media screen and (min-width: 1024px)
+    width: 25%
+  ul
+    list-style-type: disc
+    padding-left: 1em
+    //padding-top: 1em
+  a:hover
+    background: $green4
+
+.interior-two
+  background: $green2
+
+.interior-three
+  background: $green3
+
+.interior-four
+  background: $green4
+  transition: opacity .4s ease .05s
+  
+.interior-five
+  width: 100%
+  max-width: 440px
+  background: #fff
+  margin: 0 auto
+  padding: 1em
+  text-align: center
+  .contact-pic
+    width: 25%
+    float: left
+    .contact-pic-img
+      border-radius: 50%
+  .contact-content
+    width: 100%
+    padding-left: 1em
+    width: 75%
+    float: left
+    p
+      margin-top: .5em
+    a
+      color: $green1
+      transition: color .2s ease .05s
+    a:hover
+      color: $green3
+      background: none
+
+@media screen and (min-width: 600px)
+  .interior-two
+    margin-left: 25%
+  .interior-three
+    margin-left: 50%
+  .interior-four
+    margin-left: 50%
+    
+@media screen and (min-width: 1024px)
+  .interior-two
+    margin-left: 25%
+  .interior-three
+    margin-left: 50%
+  .interior-four
+    margin-left: 75%
