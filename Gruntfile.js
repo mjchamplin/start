@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     sass: {                              // Task
       dist: {                            // Target
         options: {                       // Target options
-          style: 'expanded'
+          // outputStyle: 'expanded'
         },
         files: {                         // Dictionary of files
           'assets/css/main.css': 'assets/css/main.sass'       // 'destination': 'source'
@@ -11,14 +11,14 @@ module.exports = function(grunt) {
       },
       build: {
         options: {
-          style: 'compact'
+          //outputStyle: 'compact'
         },
         files: {
-          'build/assets/css/main.css': 'assets/css/main.sass' 
+          'build/assets/css/main.css': 'assets/css/main.sass'
         }
       }
     },
-    
+
     imagemin: {
       jpg: {
         options: {
@@ -38,13 +38,13 @@ module.exports = function(grunt) {
         ]
       }
     },
-    
+
     clean: {
       build: {
         src: [ 'build' ]
       },
     },
-    
+
     copy: {
       build: {
         cwd: '.',
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
         expand: true
       }
     },
-    
+
     uglify: {
       build: {
         files: {
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     secret: grunt.file.readJSON('secret.json'),
     sftp: {
       deploy: {
@@ -101,8 +101,8 @@ module.exports = function(grunt) {
           password: '<%= secret.password %>'
         }
       }
-    },    
-    
+    },
+
     watch: {
       files: ['assets/css/*.sass'],
       tasks: ['sass']
@@ -117,7 +117,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-ssh');
 
-  
+
   grunt.registerTask('default', ['sass:dist']);
   grunt.registerTask('build', ['clean', 'copy', 'sass:build','imagemin', 'uglify']);
   grunt.registerTask('deploy', ['sshexec']);
