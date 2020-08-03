@@ -1,8 +1,8 @@
 # Starting point for basic html projects
 
-Intended to speed up development time for static sites and landing pages. 
+Intended to speed up development time for static sites and landing pages.
 
-Included: _Grunt.js_ with the following packages: 
+Included: _Grunt.js_ with the following packages:
 - clean
 - Copy
 - Imagemin
@@ -11,4 +11,4 @@ Included: _Grunt.js_ with the following packages:
 - Watch
 - SSH
 
-Also includes the HTML 5 Reset & Jquery.
+Edit `deploy` task to set up auto-deployment using either SFTP or SSH/GitHub.
